@@ -31,3 +31,13 @@ contact_id  int PK
 first_name carchar(50)
 last_name varchar(50)
 email varchar(100)
+
+backers
+-
+backer_id varchar PK
+cf_id int FK
+first_name varchar(50) 
+last_name varchar(50)
+email varchar(100)
+
+
