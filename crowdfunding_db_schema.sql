@@ -40,4 +40,23 @@ first_name varchar(50)
 last_name varchar(50)
 email varchar(100)
 
+-- create table backers
+Create Table backers (
+backer_id varchar NOT NULL,
+cf_id int NOT NULL,
+first_name varchar(50) NOT NULL,
+last_name varchar(50) NOT NULL,
+email varchar(100) NOT NULL,
+CONSTRAINT pk_backers PRIMARY KEY (backer_id)
+);
+
+drop table backers cascade;
+
+SELECT * FROM backers
+
+-- add foreign key contstraint 
+
+Alter TABLE backers
+ADD Foreign KEY(cf_id)
+References campaign(cf_id)
 
